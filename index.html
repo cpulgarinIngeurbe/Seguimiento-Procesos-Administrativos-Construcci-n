@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0062)file:///C:/Users/cpulgarin/Downloads/compromisos_mejora_2.html -->
+<!-- saved from url=(0062)file:///C:/Users/cpulgarin/Downloads/compromisos_mejora_5.html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,102 +9,187 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            padding: 0;
+            color: #1d1d1f;
+            line-height: 1.6;
         }
         
         .header {
-            background: linear-gradient(135deg, #5a6b3d 0%, #7a8c52 100%);
-            color: white;
-            padding: 30px;
-            margin-bottom: 30px;
+            max-width: 100%;
+            margin: 0;
+            text-align: center;
+            padding: 24px 40px;
+            background: linear-gradient(135deg, #5a7d3d 0%, #6b8e48 100%);
             border-radius: 0;
-            border-bottom: 8px solid #9bc837;
+            border: none;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(90, 125, 61, 0.2);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #9bc837 0%, #b8e552 50%, #9bc837 100%);
+            pointer-events: none;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
         }
         
         .header h1 {
             font-size: 32px;
-            margin-bottom: 8px;
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            line-height: 1.1;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
         }
         
         .header p {
-            font-size: 14px;
-            opacity: 0.95;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.2px;
+        }
+        
+        .header .date {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            margin-top: 4px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.3px;
         }
         
         .container {
-            background-color: #f0ede5;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            border-left: 4px solid #9bc837;
+            padding: 40px 40px 40px;
         }
         
         .accordion-item {
-            border: none;
-            border-bottom: 1px solid #e8e8e8;
-            margin-bottom: 0;
-            border-radius: 0;
+            margin-bottom: 6px;
+            border-radius: 18px;
             overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: #f5f5f7;
+            border: 1px solid #e5e5e7;
         }
         
-        .accordion-item:last-child {
-            border-bottom: none;
+        .accordion-item:hover {
+            background: #f9f9fb;
+            border-color: #d2d2d7;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+        }
+        
+        .accordion-item.active {
+            background: linear-gradient(135deg, #f0f5e8 0%, #e8f0dd 100%);
+            border-color: #d4e8b8;
+            box-shadow: 0 12px 40px rgba(155, 200, 55, 0.15);
         }
         
         .accordion-header {
-            background-color: #fafafa;
-            padding: 20px 24px;
+            padding: 24px 32px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
-            color: #333;
-            border-bottom: none;
-            transition: background-color 0.2s ease, padding-left 0.2s ease;
+            transition: all 0.3s ease;
             user-select: none;
-            border-left: 4px solid transparent;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
         }
         
         .accordion-header:hover {
-            background-color: #f0f0f0;
-            padding-left: 28px;
+            background: rgba(0, 0, 0, 0.02);
         }
         
         .accordion-header.active {
-            background-color: #e8dcc4;
-            border-left-color: #9bc837;
-            padding-left: 28px;
+            background: linear-gradient(90deg, rgba(155, 200, 55, 0.1) 0%, rgba(155, 200, 55, 0.05) 100%);
+        }
+        
+        .compromiso-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: -0.2px;
+            color: #1d1d1f;
+        }
+        
+        .status-circle {
+            width: 10px;
+            height: 10px;
+            background: #34c759;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 2px 10px rgba(52, 199, 89, 0.3);
         }
         
         .accordion-toggle {
             font-size: 18px;
-            font-weight: bold;
-            color: #9bc837;
-            width: 24px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            color: #86868b;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             flex-shrink: 0;
-            margin-left: 16px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .accordion-toggle.active {
             transform: rotate(180deg);
+            color: #34c759;
         }
         
         .accordion-content {
             display: none;
-            padding: 0;
-            background-color: #f0ede5;
-            border-top: 1px solid #e8e8e8;
+            padding: 0 32px 32px;
+            background: transparent;
+            animation: slideDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .accordion-content.active {
@@ -114,77 +199,112 @@
         .detail-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            padding: 24px;
-            border-bottom: 1px solid #e8e8e8;
-            background-color: #f0ede5;
+            gap: 60px;
+            margin-bottom: 40px;
         }
         
         .detail-row:last-child {
-            border-bottom: none;
+            margin-bottom: 0;
         }
         
         .detail-section h3 {
-            font-size: 11px;
-            font-weight: 800;
-            color: #5a6b3d;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            color: #34c759;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 14px;
+            margin-bottom: 6px;
+            opacity: 0.8;
         }
         
         .detail-section p {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.7;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
             white-space: pre-wrap;
             word-wrap: break-word;
+            font-weight: 400;
         }
         
         .detail-section ul {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.8;
-            margin-left: 0;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.9;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
         
         .detail-section ul li {
-            margin-bottom: 8px;
-            padding-left: 20px;
+            margin-bottom: 12px;
+            padding-left: 26px;
             position: relative;
+            font-weight: 400;
         }
         
         .detail-section ul li:before {
-            content: "▪";
-            color: #9bc837;
-            font-weight: bold;
-            margin-right: 10px;
+            content: "•";
+            color: #34c759;
+            font-weight: 600;
+            font-size: 20px;
             position: absolute;
             left: 0;
+            top: -3px;
         }
         
         .full-width {
             grid-column: 1 / -1;
         }
         
-        .compromiso-title {
-            flex: 1;
-            font-size: 14px;
-            color: #333;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #34c759;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
         
-        .status-circle {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #9bc837;
-            border-radius: 50%;
-            flex-shrink: 0;
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .header p {
+                font-size: 13px;
+            }
+            
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .accordion-header {
+                padding: 20px 24px;
+            }
+            
+            .accordion-content {
+                padding: 0 24px 24px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .header {
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
@@ -192,19 +312,19 @@
     <div class="header">
         <h1>Seguimiento Procesos Administrativos Construcción</h1>
         <p>Iniciativas de mejora de procesos - Ingeurbe</p>
-        <p style="margin-top: 12px; font-size: 13px; opacity: 0.9;">15 de mayo de 2026</p>
+        <p class="date">15 de mayo de 2026</p>
     </div>
     
     <div class="container">
         <!-- Compromiso 1 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     1. Aprobación manual generalizada
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -240,12 +360,12 @@
 
         <!-- Compromiso 2 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     2. Docs técnicos = contractuales
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -276,13 +396,13 @@
 
         <!-- Compromiso 3 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     3. Sin trazabilidad de pedidos
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -314,12 +434,12 @@
 
         <!-- Compromiso 4 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     4. BIM/Revit subutilizado
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -351,12 +471,12 @@
 
         <!-- Compromiso 5 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     5. Gemelo Sinco desconectados
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -387,13 +507,13 @@
 
         <!-- Compromiso 6 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     6. Módulos Sinco sin habilitar
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -429,15 +549,15 @@
         </div>
 
         <!-- Compromiso 7 -->
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-item active">
+            <button class="accordion-header active" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     7. Carga operativa no delegada
                 </div>
-                <div class="accordion-toggle">▼</div>
-            </div>
-            <div class="accordion-content">
+                <div class="accordion-toggle active">▼</div>
+            </button>
+            <div class="accordion-content active">
                 <div class="detail-row">
                     <div class="detail-section">
                         <h3>Compromiso</h3>
@@ -473,13 +593,13 @@
 
         <!-- Compromiso 8 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     8. Retención ICA seleccionada a mano
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -512,13 +632,13 @@
 
         <!-- Compromiso 9 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     9. Pagos sin flujo inteligente
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -550,13 +670,13 @@
 
         <!-- Compromiso 10 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     OTROS: Generar minuta contractual con campos en amarillo estándar de revisión
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -589,13 +709,13 @@
 
         <!-- Compromiso 11 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     OTROS: PDF en ZOHO que revise minutas contractuales
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -633,12 +753,12 @@
 
         <!-- Compromiso 12 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     OTROS: Diseñar la arquitectura del proceso actual y posibles mejoras
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -669,13 +789,13 @@
 
         <!-- Compromiso 13 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     OTROS: Agente que valide la minuta contractual IA y el contrato
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -714,13 +834,13 @@
 
         <!-- Compromiso 14 -->
         <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
+            <button class="accordion-header" onclick="toggleAccordion(event)">
                 <div class="compromiso-title">
                     <span class="status-circle"></span>
                     OTROS: La póliza esté bien con lo que se pide en el contrato
                 </div>
                 <div class="accordion-toggle">▼</div>
-            </div>
+            </button>
             <div class="accordion-content">
                 <div class="detail-row">
                     <div class="detail-section">
@@ -758,30 +878,19 @@
     </div>
 
     <script>
-        function toggleAccordion(header) {
+        function toggleAccordion(event) {
+            const header = event.target.closest('.accordion-header');
             const content = header.nextElementSibling;
             const toggle = header.querySelector('.accordion-toggle');
+            const item = header.closest('.accordion-item');
             
             // Cerrar otros acordeones
-            const allHeaders = document.querySelectorAll('.accordion-header');
-            const allContents = document.querySelectorAll('.accordion-content');
-            const allToggles = document.querySelectorAll('.accordion-toggle');
-            
-            allHeaders.forEach(h => {
+            document.querySelectorAll('.accordion-header.active').forEach(h => {
                 if (h !== header) {
                     h.classList.remove('active');
-                }
-            });
-            
-            allContents.forEach(c => {
-                if (c !== content) {
-                    c.classList.remove('active');
-                }
-            });
-            
-            allToggles.forEach(t => {
-                if (t !== toggle) {
-                    t.classList.remove('active');
+                    h.nextElementSibling.classList.remove('active');
+                    h.querySelector('.accordion-toggle').classList.remove('active');
+                    h.closest('.accordion-item').classList.remove('active');
                 }
             });
             
@@ -789,6 +898,14 @@
             header.classList.toggle('active');
             content.classList.toggle('active');
             toggle.classList.toggle('active');
+            item.classList.toggle('active');
+            
+            // Scroll suave al item abierto
+            if (item.classList.contains('active')) {
+                setTimeout(() => {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
         }
     </script>
 
