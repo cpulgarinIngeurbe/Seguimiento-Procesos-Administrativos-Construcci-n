@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///C:/Users/cpulgarin/Downloads/compromisos_mejora_2.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento Procesos Administrativos Construcción</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #5a6b3d 0%, #7a8c52 100%);
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 0;
+            border-bottom: 8px solid #9bc837;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+        
+        .container {
+            background-color: #f0ede5;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            border-left: 4px solid #9bc837;
+        }
+        
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #e8e8e8;
+            margin-bottom: 0;
+            border-radius: 0;
+            overflow: hidden;
+        }
+        
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .accordion-header {
+            background-color: #fafafa;
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #333;
+            border-bottom: none;
+            transition: background-color 0.2s ease, padding-left 0.2s ease;
+            user-select: none;
+            border-left: 4px solid transparent;
+        }
+        
+        .accordion-header:hover {
+            background-color: #f0f0f0;
+            padding-left: 28px;
+        }
+        
+        .accordion-header.active {
+            background-color: #e8dcc4;
+            border-left-color: #9bc837;
+            padding-left: 28px;
+        }
+        
+        .accordion-toggle {
+            font-size: 18px;
+            font-weight: bold;
+            color: #9bc837;
+            width: 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+        
+        .accordion-toggle.active {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            display: none;
+            padding: 0;
+            background-color: #f0ede5;
+            border-top: 1px solid #e8e8e8;
+        }
+        
+        .accordion-content.active {
+            display: block;
+        }
+        
+        .detail-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 24px;
+            border-bottom: 1px solid #e8e8e8;
+            background-color: #f0ede5;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-section h3 {
+            font-size: 11px;
+            font-weight: 800;
+            color: #5a6b3d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+        
+        .detail-section p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .detail-section ul {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.8;
+            margin-left: 0;
+            list-style: none;
+        }
+        
+        .detail-section ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .detail-section ul li:before {
+            content: "▪";
+            color: #9bc837;
+            font-weight: bold;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .compromiso-title {
+            flex: 1;
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .status-circle {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #9bc837;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Seguimiento Procesos Administrativos Construcción</h1>
+        <p>Iniciativas de mejora de procesos - Ingeurbe</p>
+        <p style="margin-top: 12px; font-size: 13px; opacity: 0.9;">15 de mayo de 2026</p>
+    </div>
+    
+    <div class="container">
+        <!-- Compromiso 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    1. Aprobación manual generalizada
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Aprobación como función de desviación: match → auto-aprobado; desviación → escalamiento por nivel: Revisar la eliminación o ajuste resumido del cuadro comparativo y también sus firmas: revisar sus desviaciones más relevantes para análisis Manual y definir cuales cuadros comparativos se dan por aprobación directo por temas de desviación 0 y cuales son motivo de revisión y aprobación según niveles de desviación y no por valor del cuadro comparativo.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción: Fabio, Diego, Esperanza</li>
+                            <li>Control de Costos: Claudia Rodriguez</li>
+                            <li>AGENTE DE APROBACIÓN AUTOMÁTICA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Res. Técnico</li>
+                            <li>Presupuesto</li>
+                            <li>Compras y Contratación</li>
+                            <li>Control de costos</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se ha realizado explicación del procedimiento del módulo SRM. Se espera despliegue para prueba piloto y verificación con SINCO para apertura en proyecto. Janneth debe programar reunión de apertura con SINCO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    2. Docs técnicos = contractuales
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Separar por rol: doc técnico vive en BIM/gemelo. Doc contractual se auto-genera desde datos técnicos.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción: Fabio Galán, Diego, Esperanza</li>
+                            <li>Presupuesto</li>
+                            <li>BIM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>—</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    3. Sin trazabilidad de pedidos
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Propuesta: Trazabilidad en línea en Sinco Generada → Validada → En aprobación → Aprobada → En ejecución → Facturada → Pagada Cada transición con timestamp, responsable y condiciones automáticas de entrada.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción: Fabio, Esperanza, Diego, Martha, Julian</li>
+                            <li>Control de Costos: Claudia</li>
+                            <li>TI: Janneth</li>
+                            <li>AGENTE DE TRAZABILIDAD</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se realizó reunión previa con el área de Control de Costos para visualizar el flujo de contratos y posibles mejoras procedimentales. Se espera próxima reunión con el Ingeniero Diego para validar implementación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 4 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    4. BIM/Revit subutilizado
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Propuesta: BIM como fuente de verdad Extracción automática de cantidades desde BIM que alimenta directamente la validación de órdenes de compra. Cero re-digitación manual.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción: Fabio, Diego, Esperanza</li>
+                            <li>Presupuestos: Felipe</li>
+                            <li>BIM: Jonathan</li>
+                            <li>AGENTE DE EXTRACCIÓN BIM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>—</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 5 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    5. Gemelo Sinco desconectados
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Propuesta: Integración bidireccional • Cantidades ejecutadas (gemelo) vs contratadas (Sinco) automáticamente• Validación PxQ sin intervención manual• Desviaciones en tiempo real: CORTE DE OBRA</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción: Fabio, Diego, Esperanza</li>
+                            <li>BIM: Jonathan</li>
+                            <li>AGENTE DE VALUDACIÓN PXQ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>—</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 6 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    6. Módulos Sinco sin habilitar
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>MODULO DE PROVEEDORES SRM EN SINCO Propuesta: Habilitar ambos módulos • Compras: cadena trazable completa• Compliance: condición de flujo integrada• El sistema bloquea, no una persona</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>TI: Janneth</li>
+                            <li>Construcción: Fabio, Diego, Esperanza, Martha, Julian, Paula</li>
+                            <li>Control de Costos: Claudia</li>
+                            <li>AGENTE DE COMPLIENCE</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Res. Técnico</li>
+                            <li>Presupuesto</li>
+                            <li>Compras y Contratación</li>
+                            <li>Control de costos</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se ha realizado explicación del procedimiento del módulo SRM. Se espera despliegue para prueba piloto y verificación con SINCO para apertura en proyecto. Janneth debe programar reunión de apertura con SINCO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 7 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    7. Carga operativa no delegada
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Propuesta: Portal de proveedor: CREACIÓN DE PROVEEDORES POR PARTE DEL CONTRATISTA/PROVEEDOR. Aprobación vinculante → Onboarding automático:• Proveedor carga documentación• Proveedor actualiza avance• Proveedor solicita pagoIngeurbe pasa de "gestionar" a "validar" Nota: Que se pueda parametrízar el tipo de contrato a ese proveedor/contratista según su CIUP</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>TI: Janneth</li>
+                            <li>Cumplimiento: Sofía</li>
+                            <li>Contabilidad</li>
+                            <li>AGENTE DE PROVEEDOR</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Res. Técnico</li>
+                            <li>Presupuesto</li>
+                            <li>Compras y Contratación</li>
+                            <li>Control de costos</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se ha realizado explicación del procedimiento del módulo SRM. Se espera despliegue para prueba piloto y verificación con SINCO para apertura en proyecto. Janneth debe programar reunión de apertura con SINCO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 8 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    8. Retención ICA seleccionada a mano
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>CIIU del proveedor (RUT) → Tabla DIAN → Retención ICA asignada automáticamente. Residente solo valida excepciones. Quick win: rápido, bajo riesgo, alto impacto Despliegue de tipos de contrato dependiendo del tipo de proveedor: que no despliegue todo los casi 120 tipos de contrato</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Contabilidad</li>
+                            <li>TI: Janneth</li>
+                            <li>Auditoría: Sofía.</li>
+                            <li>Construcción: Martha y Julian</li>
+                            <li>AGENTE DE COMPLIENCE</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se realizó reunión previa con el área de Control de Costos para visualizar el flujo de contratos y posibles mejoras procedimentales. Se espera próxima reunión con el Ingeniero Diego para validar implementación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 9 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    9. Pagos sin flujo inteligente
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Agente de validación de pagos VERDE: (NO → Match completo Pre-firma automática Doc entra a Zoho Sign al 100%Firmantes solo confirman PAGO AUTORIZADO), AMARILLO: SÍ (menor) Devuelve a compras para corrección y reenvío al agente, ROJO: SÍ (crítica) Escala directo a auditoría. El agente clasifica,no negocia. Revisar FLUJO DE FIRMAS PARA PAGOS</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Construcción</li>
+                            <li>Auditoría</li>
+                            <li>Janneth y Anabel</li>
+                            <li>AGENTE PRE-FIRMA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se realizó reunión previa con el área de Control de Costos para visualizar el flujo de contratos y posibles mejoras procedimentales. Se espera próxima reunión con el Ingeniero Diego para validar implementación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 10 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    OTROS: Generar minuta contractual con campos en amarillo estándar de revisión
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>TI: Anabel y Janneth</li>
+                            <li>Construcción: Julian Vivas, Martha</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Jurídica</li>
+                            <li>Control</li>
+                            <li>Subgerente</li>
+                            <li>Dir. Obra</li>
+                            <li>Residente</li>
+                            <li>Interventor</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row full-width">
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se socializa con TI el flujo requerido de llenado automático de minuta y firmas con Zoho, con pendientes de revisión de integrabilidad entre plataformas. Se ha validado los campos requeridos con Janneth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 11 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    OTROS: PDF en ZOHO que revise minutas contractuales
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>PDF en ZOHO que revise minutas contractuales que se deben descargar y modificar de forma "Manual" y llene los espacios automático</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Residente Administrativo: Julian y Martha.</li>
+                            <li>Jurídico.</li>
+                            <li>Anabel y Janneth</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Jurídica</li>
+                            <li>Control</li>
+                            <li>Subgerente</li>
+                            <li>Dir. Obra</li>
+                            <li>Residente</li>
+                            <li>Interventor</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se socializa con TI el flujo requerido de llenado automático de minuta y firmas con Zoho, con pendientes de revisión de integrabilidad entre plataformas. Se ha validado los campos requeridos con Janneth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 12 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    OTROS: Diseñar la arquitectura del proceso actual y posibles mejoras
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Diseñar la arquitectura del proceso actual y posibles mejoras. Revisar paralelismo de flujo de proceso e identificación de rutas críticas</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>Mejoramiento Continuo: Leo Reyes</li>
+                            <li>Construcción: Fabio, Esperanza y Diego, Martha y julian</li>
+                            <li>Constrol de Costos: Claudia</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <p>—</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se ha completado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 13 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    OTROS: Agente que valide la minuta contractual IA y el contrato
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>Agente que valide la minuta contractual IA y el contrato (incluye que este incluido el cuadro comparativo, soportes, cotizaciónes).</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>TI: Anabel y Janneth</li>
+                            <li>Jurídico</li>
+                            <li>Auditoría</li>
+                            <li>Construcción: Martha y Julian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Jurídica</li>
+                            <li>Control</li>
+                            <li>Subgerente</li>
+                            <li>Dir. Obra</li>
+                            <li>Residente</li>
+                            <li>Interventor</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se socializa con TI el flujo requerido de llenado automático de minuta y firmas con Zoho, con pendientes de revisión de integrabilidad entre plataformas. Se ha validado los campos requeridos con Janneth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromiso 14 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="compromiso-title">
+                    <span class="status-circle"></span>
+                    OTROS: La póliza esté bien con lo que se pide en el contrato
+                </div>
+                <div class="accordion-toggle">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Compromiso</h3>
+                        <p>La póliza este bien con lo que se pide en le contrato y que también registe la póliza en sinco (Check de activación)</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Responsable</h3>
+                        <ul>
+                            <li>TI: Anabel y Janneth</li>
+                            <li>Jurídico</li>
+                            <li>Auditoría Sofia</li>
+                            <li>Construcción: Martha y Julian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-section">
+                        <h3>Doliente</h3>
+                        <ul>
+                            <li>Res. Admin.</li>
+                            <li>Control</li>
+                            <li>Ing. Forero</li>
+                            <li>Contratistas</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Avance</h3>
+                        <p>Se da explicación del proceso y de los requerimientos de ingesta de datos y registro automático. Queda pendiente validar cómo se realizaría la automatización.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.accordion-toggle');
+            
+            // Cerrar otros acordeones
+            const allHeaders = document.querySelectorAll('.accordion-header');
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allToggles = document.querySelectorAll('.accordion-toggle');
+            
+            allHeaders.forEach(h => {
+                if (h !== header) {
+                    h.classList.remove('active');
+                }
+            });
+            
+            allContents.forEach(c => {
+                if (c !== content) {
+                    c.classList.remove('active');
+                }
+            });
+            
+            allToggles.forEach(t => {
+                if (t !== toggle) {
+                    t.classList.remove('active');
+                }
+            });
+            
+            // Alternar el acordeón actual
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+
+
+</body></html>
